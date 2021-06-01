@@ -1,0 +1,202 @@
+.heading {
+    min-height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    background-color: $color--white;
+
+    &__first {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // LOVE TITLE
+}
+
+.love {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 7rem;
+    h2 {
+        color: $color--primary--dark-magenta;
+    }
+
+    p {
+        line-height: 2.5rem;
+        color: $color--dark-magenta;
+        padding-top: 2.5rem;
+        margin: 0 auto;
+        max-width: 72.4rem;
+    }
+}
+
+    // RATING
+
+.ratings {
+    margin-top: 2.5rem;
+    @include center();
+    flex-direction: column;
+    &__review {
+        background-color: $color--light-magenta;
+        margin: 1.5rem 0rem;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        text-align: center;
+        width: 100%;
+        max-width: 40rem;
+
+        h3 {
+            color: $color--primary--dark-magenta;
+        }
+    }
+}
+
+.star {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: orange;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+  // TESTOMONIAL
+
+  .testomonials {
+    @include center();
+    flex-direction: column;
+    color: $color--white;
+      &__testomonial {
+          flex: 1 1;
+          max-width: 50rem;
+          background-color: $color--primary--dark-magenta;
+          padding: 5rem 2.5rem;
+          margin-top: 2rem;
+          border-radius: 1.5rem;
+
+          p {
+              line-height: 2.5rem;
+              height: 14.4rem;
+          }
+        &__title
+        {
+            padding-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+
+          
+
+            .obrazek {
+                background-size: cover;
+                background-position-x: 90%;
+                margin-right: 2rem;
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .test_1 {
+                background-position: initial;
+                background-image: url(./heading/images/typek_1.jpg);
+            }
+
+            .test_2 {
+                background-image: url(./heading/images/typek_2.jpg);
+            }
+
+            .test_3 {
+                background-image: url(./heading/images/typek_3.jpg);
+            }
+
+            &__text {
+                h4 {
+                    padding-bottom: 0.3rem;
+                    font-weight: 400;
+                }
+
+                h4:last-child {
+                    color: $color--primary--soft-pink;
+                }
+            }
+
+
+        }
+      }
+  }
+
+
+  @media (max-width:392px) {
+      html {
+          font-size: 50%;
+      }
+  }
+
+  @media (min-width:1024px) {
+    .testomonials 
+    {
+        flex-direction: row;
+        &__testomonial:nth-of-type(2)
+        {
+            transform: translateY(5rem);
+            margin: 2rem 2rem 0rem 2rem;
+        }
+        &__testomonial:nth-of-type(3)
+        {
+            transform: translateY(10rem);
+        }
+    }
+
+    .heading 
+    {
+        width: 80%;
+     &__first { 
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 10rem;
+        padding-bottom: 5rem;
+        }
+    }
+
+
+    .love {
+        margin: 0;
+        padding-top: 0px;
+        text-align: left;
+        h2 {
+            width: 40rem;
+        }
+    
+        p {
+            width: 50rem;
+        }
+    }
+
+    .ratings__review {
+        display: flex;
+        max-width: 50rem;
+
+        &:nth-of-type(1){
+            transform: translate(-5rem);
+        }
+        &:last-child{
+            transform: translate(5rem);
+        }
+        
+        .star__wrapper {
+            margin-right: 5rem;
+        }
+         h3 {
+             font-size: 1.5rem;
+         }
+        }
+    
+}
+
+@media (min-width:1024px) and (max-width:1200px)
+{
+    html {
+        font-size: 60%;
+    }
+}
