@@ -36,7 +36,22 @@ h4 {
   background-color: white;
 }
 
-.heading__first {
+.heading__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.heading__wrapper__first {
+  width: 100%;
+  max-width: 1540px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,7 +224,7 @@ h4 {
   .heading {
     width: 80%;
   }
-  .heading__first {
+  .heading__wrapper__first {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
